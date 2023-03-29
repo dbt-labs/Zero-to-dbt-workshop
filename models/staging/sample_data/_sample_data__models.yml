@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_sample_data__customers
+    description: "staging model for customers data"
     columns:
       - name: customer_key
         tests:
@@ -56,6 +57,7 @@ models:
           - not_null
       - name: customer_key
       - name: status_code
+        description: "doc{{'status_code'}}"
       - name: total_price
       - name: order_date
       - name: priority_code

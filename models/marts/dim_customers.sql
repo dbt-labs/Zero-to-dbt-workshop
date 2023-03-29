@@ -27,8 +27,8 @@ final as (
         nations.nation_key,
         regions.region_key,
         regions.region_name,
-        regions.comment
-        -- add nation name 
+        regions.comment,
+        nations.nation_name 
 
 
     from

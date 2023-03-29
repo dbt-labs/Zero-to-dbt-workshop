@@ -55,7 +55,9 @@ models:
           - unique
           - not_null
       - name: customer_key
+        description: Primary Key
       - name: status_code
+        description: "{{ doc('status_code') }}"
       - name: total_price
       - name: order_date
       - name: priority_code
@@ -64,6 +66,7 @@ models:
               values: ['1-URGENT','2-HIGH','3-MEDIUM','4-NOT SPECIFIED', '5-LOW']
               severity: warn
       - name: clerk_name
+        description:  Clerk Names
       - name: ship_priority
       - name: comment
 

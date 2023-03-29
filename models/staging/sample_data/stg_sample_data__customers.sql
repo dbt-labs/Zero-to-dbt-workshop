@@ -2,7 +2,7 @@ with
 
 source as (
 
-  select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.customer
+  select * from {{ source('snowflake_sample_data', 'customer') }}
 
 ),
 

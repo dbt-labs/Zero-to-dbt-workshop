@@ -8,6 +8,10 @@ sources:
       - name: customer
         columns: 
           - name: c_custkey
+          - tests:
+              - unique
+              - not_null
+            
       - name: lineitem
       - name: nation
         columns:

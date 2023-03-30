@@ -18,6 +18,7 @@ models:
   - name: stg_sample_data__line_items
     columns:
       - name: order_key
+        description: Order key for the data lines table
         tests:
           - not_null
       - name: part_key
@@ -56,6 +57,7 @@ models:
           - not_null
       - name: customer_key
       - name: status_code
+        description: "{{ doc('status_code') }}"
       - name: total_price
       - name: order_date
       - name: priority_code

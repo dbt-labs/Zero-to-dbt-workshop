@@ -1,3 +1,9 @@
+{{
+    config(
+        materialized='table'
+    )
+}}
+
 with customers as (
 
     select * from {{ ref('stg_sample_data__customers') }}
@@ -20,8 +26,8 @@ final as (
         customers.customer_acct_balance,
         nations.nation_key,
         regions.region_key,
-        regions.region_name
-        -- add nation name 
+        regions.region_name,
+        nations.nation_name
 
 
     from

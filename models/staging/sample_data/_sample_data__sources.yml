@@ -6,6 +6,7 @@ sources:
     schema: TPCH_SF1
     tables:
       - name: customer
+        description: holds customer information
         columns: 
           - name: c_custkey
       - name: lineitem

@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_sample_data__customers
+    description: Staging model for the customers data
     columns:
       - name: customer_key
         tests:

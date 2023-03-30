@@ -9,8 +9,8 @@ sources:
         columns: 
           - name: c_custkey
             tests:
-              - unique:
-              - not_null:                  
+            - unique:
+            - not_null:              
       - name: lineitem
       - name: nation
         columns:

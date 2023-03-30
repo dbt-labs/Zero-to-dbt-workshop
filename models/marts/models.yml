@@ -42,3 +42,4 @@ models:
       - name: item_discount_amount
       - name: item_tax_amount
       - name: net_item_sales_amount
+        description: Total revenue after discounts etc

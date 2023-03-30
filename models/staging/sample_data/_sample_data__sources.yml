@@ -8,6 +8,11 @@ sources:
       - name: customer
         columns: 
           - name: c_custkey
+            description: Unique customer key to each individual customer. PK
+            tests:
+            - unique
+            - not_null
+                
       - name: lineitem
       - name: nation
         columns:
@@ -15,10 +20,9 @@ sources:
       - name: orders
         columns:
           - name: o_orderkey
-        loaded_at_field: "CAST(o_orderdate AS TIMESTAMP)"
-        freshness:
-          warn_after: {count: 1, period: day}
-          error_after: {count: 2, period: day}
       - name: region
         columns:	
           - name: r_regionkey
+            tests:
+            - unique
+            - not_null

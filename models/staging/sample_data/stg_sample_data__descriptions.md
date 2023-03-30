@@ -10,3 +10,14 @@ One of the following values:
 
 
 {% enddocs %}
+
+{% docs priority_code %}
+	
+One of the following values: 
+
+| status         | definition                                       |
+|----------------|--------------------------------------------------|
+| 1                     URgent|
+
+
+{% enddocs %}

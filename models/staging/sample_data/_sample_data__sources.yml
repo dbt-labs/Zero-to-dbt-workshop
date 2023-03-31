@@ -8,17 +8,30 @@ sources:
       - name: customer
         columns: 
           - name: c_custkey
+            tests:
+              - not_null
+              - unique            
+              
       - name: lineitem
       - name: nation
         columns:
           - name: n_nationkey
+            tests:
+              - not_null
+              - unique            
       - name: orders
         columns:
           - name: o_orderkey
+            tests:
+              - not_null
+              - unique            
         loaded_at_field: "CAST(o_orderdate AS TIMESTAMP)"
         freshness:
-          warn_after: {count: 1, period: day}
-          error_after: {count: 2, period: day}
+          warn_after: {count: 7, period: day}
+          error_after: {count: 14, period: day}
       - name: region
         columns:	
           - name: r_regionkey
+            tests:
+              - not_null
+              - unique            

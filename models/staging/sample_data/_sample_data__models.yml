@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_sample_data__customers
+    description: Staging model for the customers data
     columns:
       - name: customer_key
         tests:
@@ -35,6 +36,7 @@ models:
       - name: ship_instructions
       - name: ship_mode
       - name: comment
+        description: A comment
 
   - name: stg_sample_data__nations
     columns:
@@ -55,7 +57,9 @@ models:
           - unique
           - not_null
       - name: customer_key
+        description: The unique identifier for the customer
       - name: status_code
+        description: "{{ doc('status_code') }}"
       - name: total_price
       - name: order_date
       - name: priority_code

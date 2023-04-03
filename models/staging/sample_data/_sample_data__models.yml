@@ -56,8 +56,11 @@ models:
           - not_null
       - name: customer_key
       - name: status_code
+        description: "{{ doc('status_code') }}"
       - name: total_price
+        description: indicates the total price paid by the customer
       - name: order_date
+        description: indicates the occurrence of the order
       - name: priority_code
         tests:
           - accepted_values:

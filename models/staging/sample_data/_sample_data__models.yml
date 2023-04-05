@@ -4,6 +4,7 @@ models:
   - name: stg_sample_data__customers
     columns:
       - name: customer_key
+        description: "Unique identifier of the customer"
         tests:
           - unique
           - not_null
@@ -18,9 +19,11 @@ models:
   - name: stg_sample_data__line_items
     columns:
       - name: order_key
+        description: "Unique identifier of the order"
         tests:
           - not_null
       - name: part_key
+        description: "Unique identifier of the part"
       - name: supplier_key
       - name: line_number
       - name: quantity
@@ -29,6 +32,7 @@ models:
       - name: tax_rate
       - name: return_flag
       - name: status_code
+        description: "{{ doc('status_code') }}
       - name: ship_date
       - name: commit_date
       - name: receipt_date
@@ -80,6 +84,3 @@ models:
               values: ['AFRICA','MIDDLE EAST','ASIA','AMERICA', 'EUROPE']
               severity: warn
       - name: comment
-
-
-  
